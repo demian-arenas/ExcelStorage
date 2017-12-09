@@ -9,4 +9,4 @@ const config = {
 firebase.initializeApp(config)
 
 export const firebaseAuth = firebase.auth
-export const firebaseStorage = firebase.storage().ref();
+export const firebaseStorage = firebase.storage()
