@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
-
+import './Dashboard.css'
+import FileUpload from './FileUpload'
+import SearchFile from "./SearchFIle";
+import TableFile from "./TableFile";
 export default class Dashboard extends Component {
   render () {
-    return (
-      <div>
-        Dashboard. This is a protected route. You can only see this if you're authed.
-      </div>
-    )
+    return <div id="Dashboard">
+        <div id="DashboardContainer">
+          <FileUpload />
+          <SearchFile />
+        </div>
+        <TableFile />
+      </div>;
   }
 }
