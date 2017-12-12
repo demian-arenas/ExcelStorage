@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { login } from '../helpers/auth'
+import './Login.css'
 
 function setErrorMsg(error) {
   return {
@@ -17,21 +18,21 @@ export default class Login extends Component {
         })
   }
   render () {
-    return (
-      <div className="col-sm-6 col-sm-offset-3">
-        <h1> Login </h1>
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label>Email</label>
-            <input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
-          </div>
-          <div className="form-group">
-            <label>Password</label>
-            <input type="password" className="form-control" placeholder="Password" ref={(pw) => this.pw = pw} />
-          </div>
-          <button type="submit" className="btn btn-primary">Login</button>
-        </form>
-      </div>
-    )
+    return <div id="login">
+        <div id='loginBox'>
+          <h1 id="loginTitle"> Login </h1>
+          <form id='loginForm' onSubmit={this.handleSubmit}>
+            <div id='loginGroup'>
+              <label>Email</label>
+              <input id="loginInput" ref={email => (this.email = email)} placeholder="Email" />
+            </div>
+            <div id='loginGroup'>
+              <label>Password</label>
+              <input type="password" id="loginInput" placeholder="Password" ref={pw => (this.pw = pw)} />
+            </div>
+            <button type="submit" id='loginSubmit'>Login</button>
+          </form>
+        </div>
+      </div>;
   }
 }
