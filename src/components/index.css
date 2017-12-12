@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#navBar {
+  display: flex;
+  min-height: 10vh;
+  max-height: 11vh;
+  padding: 1vh 2vw 0 0;
+  margin: 1vh 2vw 0 0;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+#navBarLink {
+  text-decoration: none;
+  list-style: none;
+  font-size: 2em;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 1vw;
+  min-width: 9vw;
+  max-height: 2em;
+  min-height: 1em;
+  max-width: 11vw;
+  font-variant: petite-caps;
+}
+#navBarLogout {
+  text-decoration: none;
+  list-style: none;
+  font-size: 2em;
+  padding: 0 0 5vh 0;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 1vw;
+  min-width: 9vw;
+  max-width: 11vw;
+  border: none;
+  font-variant: petite-caps;
+  background: transparent;
+}

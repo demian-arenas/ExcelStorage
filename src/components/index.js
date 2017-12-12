@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
+import './index.css';
 import { Route, BrowserRouter, Link, Redirect, Switch } from 'react-router-dom'
 import Login from './Login'
 import Dashboard from './protected/Dashboard'
@@ -52,41 +53,28 @@ export default class App extends Component {
     this.removeListener()
   }
   render() {
-    return this.state.loading === true ? <h1>Loading</h1> : (
-      <BrowserRouter>
+    return this.state.loading === true ? <h1>Loading</h1> : <BrowserRouter>
         <div>
-          <nav className="navbar navbar-default navbar-static-top">
-            <div className="container">
-              <ul className="nav navbar-nav pull-right">
-                <li>
-                  <Link to="/dashboard" className="navbar-brand">Dashboard</Link>
-                </li>
-                <li>
-                  {this.state.authed
-                    ? <button
-                        style={{border: 'none', background: 'transparent'}}
-                        onClick={() => {
-                          logout()
-                        }}
-                        className="navbar-brand">Logout</button>
-                    : <span>
-                        <Link to="/" className="navbar-brand">Login</Link>
-                      </span>}
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <div className="container">
-            <div className="row">
-              <Switch>
-                <PublicRoute authed={this.state.authed} exact path='/' component={Login} />
-                <PrivateRoute authed={this.state.authed} path='/dashboard' component={Dashboard} />
-                <Route render={() => <h3>No Match</h3>} />
-              </Switch>
-            </div>
+          <div id="navBar">
+            <Link id="navBarLink" to="/dashboard">
+              Dashboard
+            </Link>
+            {this.state.authed ? <button id="navBarLogout" onClick={() => {
+                  logout();
+                }}>
+                Logout
+              </button> :
+              <Link id="navBarLink"  to="/">
+                Login
+              </Link>
+              }
           </div>
+          <Switch>
+            <PublicRoute authed={this.state.authed} exact path="/" component={Login} />
+            <PrivateRoute authed={this.state.authed} path="/dashboard" component={Dashboard} />
+            <Route render={() => <h3>No Match</h3>} />
+          </Switch>
         </div>
-      </BrowserRouter>
-    );
+      </BrowserRouter>;
   }
 }
