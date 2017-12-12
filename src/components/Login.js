@@ -24,11 +24,11 @@ export default class Login extends Component {
           <form id='loginForm' onSubmit={this.handleSubmit}>
             <div id='loginGroup'>
               <label>Email</label>
-              <input id="loginInput" ref={email => (this.email = email)} placeholder="Email" />
+              <input className="loginInput" ref={email => (this.email = email)} placeholder="Email" />
             </div>
             <div id='loginGroup'>
               <label>Password</label>
-              <input type="password" id="loginInput" placeholder="Password" ref={pw => (this.pw = pw)} />
+              <input type="password" className="loginInput" placeholder="Password" ref={pw => (this.pw = pw)} />
             </div>
             <button type="submit" id='loginSubmit'>Login</button>
           </form>

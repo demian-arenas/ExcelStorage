@@ -26,7 +26,7 @@
 #loginBox {
   min-height: 50vh;
   max-height: 80vh;
-  min-width: 30vw;
+  min-width: 45vw;
   max-width: 50vw;
   background: rgba(32, 87, 207, 0.795);
   right: 38%;
@@ -79,7 +79,7 @@
   width: 75%;
 }
 
-#loginInput {
+.loginInput {
   display: block;
   width: 100%;
   height: 34px;
