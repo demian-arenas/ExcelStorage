@@ -4,7 +4,7 @@ export default class TableFile extends Component {
   render () {
     return <div>
         <table id="Table">
-          <thead id="TableHead">
+          <thead id="TableHead" style={{textAlign: 'justify'}}>
             <tr>
               <th>Nombre</th>
               <th>Descargar</th>
