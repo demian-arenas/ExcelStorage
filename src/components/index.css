@@ -5,6 +5,7 @@ body {
 }
 #navBar {
   display: flex;
+  min-width: 70vw;
   min-height: 10vh;
   max-height: 11vh;
   padding: 1vh 2vw 0 0;
@@ -19,7 +20,7 @@ body {
   text-align: center;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 1vw;
+  margin: 0 6vw 0 6vw;
   min-width: 9vw;
   max-height: 2em;
   min-height: 1em;
@@ -34,7 +35,7 @@ body {
   text-align: center;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 1vw;
+  margin: 0 1vw 0 6vw;
   min-width: 9vw;
   max-width: 11vw;
   border: none;
