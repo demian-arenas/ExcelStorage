@@ -1,0 +1,73 @@
+td, th {
+  min-width: 30vw;
+  max-width: 30vw;
+}
+#Dashboard {
+  margin-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 35vh;
+  max-height: 80vh;
+}
+
+#DashboardContainer {
+  display: flex;
+  flex-direction: row;
+  min-width: 90vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#FileUploadContainer {
+  display: flex;
+  font-size: 1.1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+}
+
+#SearchFile {
+  display: flex;
+  flex-direction: column;
+  min-width: 30vw;
+  min-height: 10vh;
+  align-items: center;
+}
+
+#SearchFileSelect {
+  min-width: 20vw;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vh;
+}
+
+#SearchFileGroup {
+  display: flex;
+  min-width: 3vw;
+  text-align: center;
+  flex-direction: column;
+}
+
+#Table {
+  min-width: 90vw;
+}
+
+#DeleteFile {
+  text-decoration: none;
+  list-style: none;
+  font-size: 1em;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 4.5vw;
+  max-width: 9vw;
+  border: none;
+  font-variant: petite-caps;
+  background: transparent;
+}
+#DeleteFile:hover {
+  min-width: 5vw;
+  background: rgba(255, 0, 0, .5);
+}
